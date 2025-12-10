@@ -35,6 +35,7 @@ public:
     void deinit();
     bool initialize();
 
+    void seek(qint64 time);
     inline qint64 totalTime() const { return Buzzic2DurationMs(m_input); }
 
     inline int bitrate() const { return 8; }
@@ -44,12 +45,14 @@ public:
 
     qint64 read(unsigned char *data, qint64 maxSize);
 
-    QString instruments() const;
-    uint32_t instrumentCount() const;
+    inline int instruments() const { return Buzzic2NumIntruments(m_input); }
+    inline QString instrument(int i) const { return Buzzic2IntrumentName(m_input, i); }
 
 private:
     QString m_path;
     Buzzic2 *m_input = nullptr;
+    qint64 m_currentSample = 0;
+    qint64 m_totalSamples = 0;
 
 };
 

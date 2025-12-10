@@ -233,9 +233,13 @@ uint32_t Buzzic2::Render(StereoSample* data, uint32_t numSamples)
             m_availableSamples = ROW_SIZE_SAMPLES;
         }
         auto samplesToCopy = min<int>(remainingSamples, m_availableSamples);
-        memcpy(data, m_samples + ROW_SIZE_SAMPLES - m_availableSamples, samplesToCopy * sizeof(StereoSample));
-        for (uint32_t i = 0; i < samplesToCopy; i++)
-            *data++ = *data * masterVolume;
+
+        if (data)
+        {
+            memcpy(data, m_samples + ROW_SIZE_SAMPLES - m_availableSamples, samplesToCopy * sizeof(StereoSample));
+            for (uint32_t i = 0; i < samplesToCopy; i++)
+                *data++ = *data * masterVolume;
+        }
 
         m_availableSamples -= samplesToCopy;
         remainingSamples -= samplesToCopy;
