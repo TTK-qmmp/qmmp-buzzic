@@ -21,8 +21,6 @@ SOURCES += decoderbuzzicfactory.cpp \
            libbuzzic/Buzzic2.cpp \
            libbuzzic/Instruments.cpp
 
-INCLUDEPATH += $$PWD/libbuzzic
-
 #CONFIG += BUILD_PLUGIN_INSIDE
 contains(CONFIG, BUILD_PLUGIN_INSIDE){
     include($$PWD/../../plugins.pri)
