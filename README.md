@@ -1,5 +1,6 @@
 This is a plugin for Qmmp (1.6.0 or greater) which supports Buzzic file.
-(Buzzic Audio File)
+
+Based on [Buzzic2](https://github.com/arnaud-neny/rePlayer/tree/main/source/Replays/Buzzic2) (Buzzic audio module).
 
 The following packages are required, including development headers,
 which some vendors split into separate packages:
