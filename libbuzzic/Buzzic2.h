@@ -5,8 +5,6 @@ struct StereoSample
 {
     float left;
     float right;
-
-    inline StereoSample operator*(float scale) const { return {left * scale, right * scale}; }
 };
 
 struct Buzzic2;
