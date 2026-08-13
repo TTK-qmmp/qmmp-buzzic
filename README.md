@@ -1,4 +1,4 @@
-This is a plugin for Qmmp (1.6.0 or greater) which supports Buzzic file.
+This is an inut plugin for Qmmp (1.6.0 or later) that supports Buzzic files.
 
 Based on [Buzzic2](https://github.com/arnaud-neny/rePlayer/tree/main/source/Replays/Buzzic2) (Buzzic audio module).
 
